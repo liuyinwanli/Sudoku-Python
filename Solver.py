@@ -36,7 +36,7 @@ class Solver:
     def initColDict(self):
         for index in range(0,9*9*4):
             self.colDict[index] = list()
-    def addRow(self,x,y,num):添加一行，其实就是添加，数独矩阵中一个元素，的一种情况；如果理解了「舞蹈链」，「如何把数独转化为舞蹈链」两个前驱知识，这将是自然而然的
+    def addRow(self,x,y,num):#添加一行，其实就是添加，数独矩阵中一个元素，的一种情况；如果理解了「舞蹈链」，「如何把数独转化为舞蹈链」两个前驱知识，这将是自然而然的
         locs = self.loc(x,y,num)
         self.rowDict[locs[0]] = locs[1:]
         for index in locs[1:]:
